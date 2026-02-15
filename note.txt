@@ -1,0 +1,60 @@
+🔄 Complete Git Flow
+
+Working Directory
+        ↓ (git add)
+Staging Area
+        ↓ (git commit)
+Local Repository
+        ↓ (git push)
+Remote Repository (GitHub)
+
+🎯 Real Example
+touch file.txt              → Working Directory
+git add file.txt            → Staging Area
+git commit -m "message"     → Local Repo
+git push origin main        → Remote Repo
+
+✅ 1. Repository Setup
+✔ git init                =>Created a new local repository
+✔ git clone <repo-url>    =>Cloned your GitHub repository
+
+✅ 2. Understanding git add(staging) Differences
+✔ git add .	            => Adds changes in current directory
+✔ git add -A	        => Adds ALL changes (new, modified, deleted)
+✔ git add --all	        => Same as -A
+✔ git add *	            => Adds tracked & untracked files but NOT deletions
+✔ git add *.txt	        => Adds only .txt files
+✔ git add file.txt	    => Adds specific file
+
+✅ 3. Understanding git reset
+✔ git reset                => Unstaged files but kept changes.
+✔ git reset HEAD~          => Moved branch back one commit (undo commit, keep changes).
+✔ git reset --hard HEAD    => Completely removed changes (dangerous ⚠).
+
+✅ 4. git rm Differences
+✔ git rm file.txt	            => Remove file from Git + disk
+✔ git rm -f file.txt	        => Force remove
+✔ git rm --cached file.txt	=> Remove from Git only (keep file locally)
+✔ git rm -r myFolder	        => Remove folder recursively
+
+✅ 5. Branching Practice
+✔ git branch newBranch         => Created branch.
+✔ git checkout newBranch       => Switched branch.
+✔ git checkout -b newBranch    =>creates and switches to branch.
+✔ git merge main               => (while on another branch) brings main changes into current branch.
+
+✅ 6. Remote Operations
+✔ Local to Remote (Push)
+git push origin branch-name  =>Uploads local commits to GitHub.
+
+✔ Remote to Local
+Remote → git fetch → git merge → Local
+OR
+Remote → git pull → Local
+
+-Fetch
+git fetch =>Downloads changes but does NOT merge.
+git merge
+
+-Pull
+git pull =>git fetch + git merge
